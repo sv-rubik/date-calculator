@@ -34,7 +34,9 @@ function clickListener(obj, index, placeholder) {
   document.querySelector(`[data-days="${Object.keys(obj)[index]}"]`).addEventListener('click', function (e) {
     e.preventDefault()
     placeholder.innerHTML = `<span class="span">${Object.values(obj)[index]} days added </span>${changeDate(Object.values(obj)[index])}`
+    // window.scrollTo(0, -300)
   })
+
 }
 
 for(let i = 0; i < Object.keys(days).length; i++) {

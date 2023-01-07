@@ -12,14 +12,14 @@
 .body {
     min-height: 100vh;
     background-image: linear-gradient(120deg, #4D5258 0%, rgba(27, 29, 32, 1) 100%);
-    padding-top: 10vh;
     color: #E8E9EE;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 16px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
+    padding-top: 5vh;
 }
 
 .copyright {
@@ -33,7 +33,6 @@
 .container {
     min-width: 80vw;
     max-width: 80vw;
-    /*min-height: 80vh;*/
     margin: 0 auto;
     padding: 50px 10%;
     background-color: #282B30;
@@ -78,6 +77,11 @@
     .new-date {
         font-size: 1.8rem;
         line-height: 50px;
+    }
+
+    .container {
+        min-width: 90vw;
+        max-width: 90vw;
     }
 }
 
