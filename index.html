@@ -10,18 +10,28 @@
 </head>
 <body class="body" id="top">
   <section class="container">
-    <h1 class="title">Calculate a date of your reserve canopy repacking</h1>
+    <h1 class="title">Check if your reserve canopy repacking is expired</h1>
     <p class="subtitle">Select days to add or enter your value</p>
-    <div class="new-date" data-date="new"></div>
+    <p class="today"></p>
+    <p class="container__set-date">Set your previous canopy <span class="span">repacking date</span></p>
 
-    <form action="" class="form">
+    <form action="" class="form form_set-date" data-type="form-date">
+        <input type="date" class="form__date" data-type="form-date-input" lang="En">
+<!--      <button class="form__submit">Calculate</button>-->
+    </form>
+
+    <div class="new-date" data-date="new"></div>
+    <div class="wrapper">
+
+    </div>
+    <form action="" class="form" data-type="form-text">
       <p class="form__text">Add <span class="span">your</span> number of days
-        <input type="text" class="form__input">
+        <input type="text" class="form__input" data-type="form-input">
       </p>
       <button class="form__submit">Calculate</button>
     </form>
   </section>
-  <p class="copyright">by Svetlana Rubinshtein 2023</p>
+  <p class="copyright">by Svetlana Rubinshtein &copy;2023</p>
 
   <script src="script.js"></script>
 </body>

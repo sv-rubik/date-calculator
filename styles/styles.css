@@ -22,19 +22,11 @@
     padding-top: 5vh;
 }
 
-.copyright {
-    padding: 70px 0 10px;
-    font-weight: 500;
-    font-size: .8em;
-    text-align: center;
-    color: #858b96;
-}
-
 .container {
-    min-width: 80vw;
-    max-width: 80vw;
+    width: 60%;
+    min-width: 600px;
     margin: 0 auto;
-    padding: 50px 10%;
+    padding: 50px 20px;
     background-color: #282B30;
     background-image: linear-gradient(120deg, #313439 0%, #17191D 100%);
     border-radius: 2rem;
@@ -43,6 +35,10 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+}
+
+.wrapper {
+    min-width: 100%;
 }
 
 .title {
@@ -56,12 +52,21 @@
     font-size: 1em;
     text-align: center;
     color: #858b96;
+    padding: 10px 0 0;
+}
+
+.today {
+    color: #e8e9ee;
     padding: 10px 0 50px;
+}
+
+.container__set-date {
+    font-size: 1.3rem;
 }
 
 .new-date {
     min-width: 100%;
-    min-height: 100px;
+    min-height: 143px;
     background-image: linear-gradient(120deg, #31343A 0%, #212328 100%);
     border: 1px solid #45474D;
     border-radius: .7rem;
@@ -73,17 +78,17 @@
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 560px) {
-    .new-date {
-        font-size: 1.8rem;
-        line-height: 50px;
-    }
+/*@media screen and (max-width: 560px) {*/
+/*    .new-date {*/
+/*        font-size: 1.8rem;*/
+/*        line-height: 50px;*/
+/*    }*/
 
-    .container {
-        min-width: 90vw;
-        max-width: 90vw;
-    }
-}
+/*    .container {*/
+/*        min-width: 830px;*/
+/*        !*max-width: 900px;*!*/
+/*    }*/
+/*}*/
 
 .span {
     color: #CE4037;
@@ -147,6 +152,24 @@
     flex-wrap: wrap;
 }
 
+.form_set-date {
+    margin: 20px 0;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.form__date {
+    background-image: linear-gradient(0deg, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
+    color: #e8e9ee;
+    border-radius: 0.3rem;
+    border: 1px solid #2A2C31;
+    line-height: 40px;
+    padding: 0 20px;
+
+}
+
 .form__input {
     border: 1px solid #2A2C31;
     border-radius: 0.3rem;
@@ -158,4 +181,17 @@
     line-height: 40px;
     margin: 0 20px;
     padding: 0 10px;
+}
+
+.copyright {
+    padding: 70px 0 10px;
+    font-weight: 500;
+    font-size: .8em;
+    text-align: center;
+    color: #858b96;
+}
+
+.expired {
+    color: #CE4037;
+    font-size: 16px;
 }
