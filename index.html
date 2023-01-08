@@ -2,27 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/styles.css">
-  <title>Date calculator</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(91977061, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/91977061" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <title>Rigger date calculator</title>
 </head>
 <body class="body" id="top">
-  <section class="container">
-    <h1 class="title">Calculate a date of your reserve canopy repacking</h1>
-    <p class="subtitle">Select days to add or enter your value</p>
-    <div class="new-date" data-date="new"></div>
+<div class="page">
+  <main class="container">
+    <h1 class="title">Check if&nbsp;your reserve canopy repacking is&nbsp;expired</h1>
+    <p class="subtitle">Select days to&nbsp;add or&nbsp;enter your value</p>
+    <p class="today"></p>
+    <p class="container__set-date">Set your previous canopy <span class="span">repacking date</span></p>
 
-    <form action="" class="form">
-      <p class="form__text">Add <span class="span">your</span> number of days
-        <input type="text" class="form__input">
+    <form class="form form_set-date" data-type="form-date">
+      <input type="date" class="form__date" data-type="form-date-input" lang="En">
+    </form>
+
+    <div class="new-date" data-date="new"></div>
+    <div class="wrapper"></div>
+
+    <form class="form" data-type="form-text">
+      <label>
+      <p class="form__text">Add <span class="span">your</span> number of&nbsp;days
+        <input type="text" class="form__input" data-type="form-input">
       </p>
+      </label>
       <button class="form__submit">Calculate</button>
     </form>
-  </section>
-  <p class="copyright">by Svetlana Rubinshtein 2023</p>
-
-  <script src="script.js"></script>
+  </main>
+  <footer class="footer">
+    <p class="copyright">by&nbsp;Svetlana Rubinshtein &copy;2023</p>
+  </footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
