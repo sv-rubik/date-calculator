@@ -19,3 +19,6 @@ This project is used by the following companies:
 - Skydive Dubai
 - Skycenter DZ Puschino
 
+## Get Android App 
+https://disk.yandex.ru/d/zr501xe5edmIWA
+
