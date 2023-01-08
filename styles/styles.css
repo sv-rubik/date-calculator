@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap);
 
 html, body  {
-    height: 100%;
+    min-height: 100%;
 }
 
 *, h1, p {
@@ -31,7 +31,7 @@ html, body  {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 3vh;
     overflow-x: hidden;
 }
 
@@ -50,7 +50,7 @@ html, body  {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    padding: 50px 20px;
+    padding: 30px 20px;
     background-color: #282B30;
     background-image: -o-linear-gradient(330deg, #313439 0%, #17191D 100%);
     background-image: linear-gradient(120deg, #313439 0%, #17191D 100%);
@@ -92,7 +92,7 @@ html, body  {
 
 .today {
     color: #e8e9ee;
-    padding: 10px 0 50px;
+    padding: 10px 0 30px;
 }
 
 .container__set-date {
@@ -125,14 +125,23 @@ html, body  {
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .new-date__text {
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .new-date__span {
     color: #37ce3a;
+}
+
+.expired {
+    position: absolute;
+    top: -8px;
+    color: red;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 560px) {
@@ -271,17 +280,44 @@ html, body  {
     background-image: -o-linear-gradient(bottom, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     background-image: linear-gradient(0deg, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     color: #e8e9ee;
-    max-width: 5em;
-    /*font-size: 20px !important;*/
+    max-width: 5rem;
     line-height: 40px;
     margin: 0 20px;
     padding: 0 10px;
 }
 
+.reset {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #858b96;
+    transition: color ease-in-out .3s;
+}
+
+.reset:hover {
+    color: #e8e9ee;
+}
+
 .copyright {
-    padding: 70px 0 10px;
+    padding: 25px 0 10px;
     font-weight: 500;
-    font-size: .8em;
+    font-size: .8rem;
     text-align: center;
     color: #858b96;
+}
+
+.footer__link {
+    display: block;
+    text-align: center;
+}
+
+.footer__link:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.footer__git {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
 }
