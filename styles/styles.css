@@ -1,6 +1,9 @@
 @import url(../vendor/normalize.css);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap);
 
+html, body  {
+    height: 100%;
+}
 
 *, h1, p {
     margin: 0;
@@ -10,7 +13,6 @@
 }
 
 .body {
-    min-height: 100vh;
     background-image: linear-gradient(120deg, #4D5258 0%, rgba(27, 29, 32, 1) 100%);
     color: #E8E9EE;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -20,12 +22,18 @@
     align-items: center;
     flex-direction: column;
     padding-top: 5vh;
+    overflow-x: hidden;
+
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .container {
-    width: 60%;
-    min-width: 600px;
-    margin: 0 auto;
+    flex-grow: 1;
     padding: 50px 20px;
     background-color: #282B30;
     background-image: linear-gradient(120deg, #313439 0%, #17191D 100%);
@@ -62,6 +70,7 @@
 
 .container__set-date {
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .new-date {
@@ -70,25 +79,39 @@
     background-image: linear-gradient(120deg, #31343A 0%, #212328 100%);
     border: 1px solid #45474D;
     border-radius: .7rem;
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-align: center;
-    line-height: 100px;
+    line-height: 50px;
     padding: 20px;
     box-shadow: 20px 20px 30px 0 #1c1e1f;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*@media screen and (max-width: 560px) {*/
-/*    .new-date {*/
-/*        font-size: 1.8rem;*/
-/*        line-height: 50px;*/
-/*    }*/
+.new-date__text {
+    padding-right: 10px;
+}
 
-/*    .container {*/
-/*        min-width: 830px;*/
-/*        !*max-width: 900px;*!*/
-/*    }*/
-/*}*/
+.new-date__span {
+    color: #37ce3a;
+}
+
+@media screen and (max-width: 560px) {
+    .new-date {
+        font-size: 1.8rem;
+        line-height: 50px;
+    }
+    .button-section__button, .form__submit, .form__text, .button-section__text {
+        margin: 0 auto;
+    }
+
+    .new-date__text {
+        font-size: 1.5rem;
+        line-height: 50px;
+    }
+}
 
 .span {
     color: #CE4037;

@@ -52,13 +52,17 @@ function changeDate (numberOfDays){
 
 // reflect current date on the page
 today.innerHTML = `<span class="span">Today is </span>${changeDate(0)}`
-newDateDiv.innerHTML = `<span class="span">Today is </span>${changeDate(0)}`
+newDateDiv.innerHTML = `<div class="new-date__text">
+                          <span class="new-date__span">Today is </span>
+                        </div> ${changeDate(0)}`
 
 // function to add button-section to page including number if days to add
 function buttonSectionToHtml(obj, index) {
   return `
     <div class="button-section">
-      <p class="button-section__text">Add <span class="span">${Object.values(obj)[index]} days</span> to current date</p>
+      <p class="button-section__text">
+        Add <span class="span">${Object.values(obj)[index]} days</span> to current date
+      </p>
       <button class="button-section__button" data-days="${Object.keys(obj)[index]}">Calculate</button>
     </div>
   `
@@ -68,7 +72,9 @@ function buttonSectionToHtml(obj, index) {
 function clickListener(obj, index, placeholder) {
   document.querySelector(`[data-days="${Object.keys(obj)[index]}"]`).addEventListener('click', function (e) {
     e.preventDefault()
-    placeholder.innerHTML = `<span class="span">${Object.values(obj)[index]} days added </span>${changeDate(Object.values(obj)[index])}`
+    placeholder.innerHTML = `<div class="new-date__text">
+                                <span class="new-date__span">${Object.values(obj)[index]} days added </span>
+                             </div>${changeDate(Object.values(obj)[index])}`
     if (changeDate(Object.values(obj)[index]) > changeDate(0)) {
       placeholder.insertAdjacentHTML("beforeend", `<span class="expired"> &mdash; repacking expired!!!</span>`)
     }
@@ -86,14 +92,18 @@ document.querySelector(`[data-type="form-text"]`).addEventListener('submit', fun
   e.preventDefault()
   let inputValue = +document.querySelector(`[data-type="form-input"]`).value
   Number.isInteger(inputValue)
-    ? newDateDiv.innerHTML = `<span class="span">${inputValue} days added </span>${changeDate(inputValue)}`
+    ? newDateDiv.innerHTML = `<div class="new-date__text">
+                                <span class="new-date__span">${inputValue} days added </span>
+                              </div>${changeDate(inputValue)}`
     : alert('Please enter a number of days')
 })
 
 // input date handling
 document.querySelector(`[data-type="form-date"]`).addEventListener('change', function () {
   inputDate = new Date(document.querySelector(`[data-type="form-date-input"]`).value)
-  newDateDiv.innerHTML = `Last <span class="span">Repacking Date</span> is ${formatDate(inputDate)}`
+  newDateDiv.innerHTML = `<div class="new-date__text">
+                                Last <span class="new-date__span">Repacking Date</span> is 
+                          </div>${formatDate(inputDate)}`
 })
 
 // TODO - labels, error on wrong input
