@@ -103,4 +103,3 @@ document.querySelector(`[data-type="form-date"]`).addEventListener('change', fun
                           </div>${formatDate(inputDate)}`
 })
 
-// TODO - labels, error on wrong input

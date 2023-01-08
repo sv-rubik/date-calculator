@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap);
 
 html, body  {
-    height: 100%;
+    min-height: 100%;
 }
 
 *, h1, p {
