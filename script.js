@@ -75,9 +75,6 @@ function clickListener(obj, index, placeholder) {
     placeholder.innerHTML = `<div class="new-date__text">
                                 <span class="new-date__span">${Object.values(obj)[index]} days added </span>
                              </div>${changeDate(Object.values(obj)[index])}`
-    if (changeDate(Object.values(obj)[index]) > changeDate(0)) {
-      placeholder.insertAdjacentHTML("beforeend", `<span class="expired"> &mdash; repacking expired!!!</span>`)
-    }
   })
 }
 

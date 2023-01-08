@@ -13,35 +13,62 @@ html, body  {
 }
 
 .body {
+    background-image: -o-linear-gradient(330deg, #4D5258 0%, rgba(27, 29, 32, 1) 100%);
     background-image: linear-gradient(120deg, #4D5258 0%, rgba(27, 29, 32, 1) 100%);
     color: #E8E9EE;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 5vh;
     overflow-x: hidden;
-
 }
 
 .page {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
 }
 
 .container {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     padding: 50px 20px;
     background-color: #282B30;
+    background-image: -o-linear-gradient(330deg, #313439 0%, #17191D 100%);
     background-image: linear-gradient(120deg, #313439 0%, #17191D 100%);
     border-radius: 2rem;
+    -webkit-box-shadow: 20px 20px 30px 0 #1c1e1f;
     box-shadow: 20px 20px 30px 0 #1c1e1f;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -76,6 +103,7 @@ html, body  {
 .new-date {
     min-width: 100%;
     min-height: 143px;
+    background-image: -o-linear-gradient(330deg, #31343A 0%, #212328 100%);
     background-image: linear-gradient(120deg, #31343A 0%, #212328 100%);
     border: 1px solid #45474D;
     border-radius: .7rem;
@@ -83,11 +111,19 @@ html, body  {
     text-align: center;
     line-height: 50px;
     padding: 20px;
+    -webkit-box-shadow: 20px 20px 30px 0 #1c1e1f;
     box-shadow: 20px 20px 30px 0 #1c1e1f;
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -123,17 +159,26 @@ html, body  {
     min-height: 70px;
     border: 1px solid #2A2C31;
     background: #24262B;
+    -webkit-box-shadow: inset 5px 5px 10px #1f2025,
+    inset -5px -5px 10px #292c31;
     box-shadow: inset 5px 5px 10px #1f2025,
-                inset -5px -5px 10px #292c31;
+    inset -5px -5px 10px #292c31;
     border-radius: .7rem;
     font-size: 1.5rem;
     text-align: center;
     line-height: 70px;
     padding: 10px 40px;
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -152,39 +197,63 @@ html, body  {
     border: 1px solid #45474C;
     border-radius: 0.3rem;
     background-color: #24262B;
+    background-image: -o-linear-gradient(330deg, #31343A 0%, #212328 100%);
     background-image: linear-gradient(120deg, #31343A 0%, #212328 100%);
     color: #e8e9ee;
     padding: 0.5rem 1rem;
-    transition: box-shadow ease-in-out 0.3s,
+    -webkit-transition: -webkit-box-shadow ease-in-out 0.3s,
+    -webkit-transform ease-in-out 0.1s;
+    transition: -webkit-box-shadow ease-in-out 0.3s,
+    -webkit-transform ease-in-out 0.1s;
+    -o-transition: box-shadow ease-in-out 0.3s,
     transform ease-in-out 0.1s;
+    transition: box-shadow ease-in-out 0.3s,
+    transform ease-in-out 0.1s,
+    -webkit-box-shadow ease-in-out 0.3s,
+    -webkit-transform ease-in-out 0.1s;
+    -webkit-box-shadow: 5px 5px 10px #1c1c1c,
+    -5px -5px 10px #292c31;
     box-shadow: 5px 5px 10px #1c1c1c,
-                -5px -5px 10px #292c31;
+    -5px -5px 10px #292c31;
 }
 
 .button-section__button:hover, .form__submit:hover {
+    -webkit-box-shadow: 10px 10px 15px #1c1c1c,
+    -10px -10px 15px #292c31;
     box-shadow: 10px 10px 15px #1c1c1c,
-                -10px -10px 15px #292c31;
+    -10px -10px 15px #292c31;
     border: 1px solid #919090;
 }
 
 .button-section__button:active, .form__submit:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
     transform: scale(0.95);
 }
 
 .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .form_set-date {
     margin: 20px 0;
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     min-width: 300px;
 }
 
 .form__date {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(49, 52, 58)), to(rgb(33, 35, 40)));
+    background-image: -o-linear-gradient(bottom, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     background-image: linear-gradient(0deg, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     color: #e8e9ee;
     border-radius: 0.3rem;
@@ -198,6 +267,8 @@ html, body  {
     border: 1px solid #2A2C31;
     border-radius: 0.3rem;
     background-color: rgb(49, 52, 58);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(49, 52, 58)), to(rgb(33, 35, 40)));
+    background-image: -o-linear-gradient(bottom, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     background-image: linear-gradient(0deg, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     color: #e8e9ee;
     max-width: 5em;
@@ -213,9 +284,4 @@ html, body  {
     font-size: .8em;
     text-align: center;
     color: #858b96;
-}
-
-.expired {
-    color: #CE4037;
-    font-size: 16px;
 }
