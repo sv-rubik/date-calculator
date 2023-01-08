@@ -39,9 +39,9 @@ function changeDate (numberOfDays){
   if (inputDate) {
     const date = new Date(inputDate)
       date.setDate(inputDate.getDate() + numberOfDays)
-    console.log(inputDate)
-    console.log(date)
-    console.log(inputDate < date)
+    // console.log(inputDate)
+    // console.log(date)
+    // console.log(inputDate < date)
       return formatDate(date)
   } else {
       const date = new Date()
