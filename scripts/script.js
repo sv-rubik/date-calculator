@@ -15,23 +15,11 @@ function formatDate(inputDate) {
   let year = inputDate.getFullYear()
   let month = inputDate.getMonth()
   let day = inputDate.getDate()
-  switch (month)
-  {
-    case 0: month="Jan"; break
-    case 1: month="Feb"; break
-    case 2: month="Mar"; break
-    case 3: month="Apr"; break
-    case 4: month="May"; break
-    case 5: month="Jun"; break
-    case 6: month="Jul"; break
-    case 7: month="Aug"; break
-    case 8: month="Sept"; break
-    case 9: month="Oct"; break
-    case 10: month="Nov"; break
-    case 11: month="Dec"; break
+  const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' ]
+  for (let i = 0; i < months.length; i++) {
+    month === i ? month = months[i] : true
   }
   return String(`${day} ${month} ${year}`)
-  // return date.toDateString().slice(4)
 }
 
 // function to get date = inputDate + days
@@ -39,8 +27,6 @@ function changeDate (numberOfDays){
   if (inputDate) {
     const date = new Date(inputDate)
       date.setDate(inputDate.getDate() + numberOfDays)
-    // console.log(inputDate)
-    // console.log(inputDate < new Date())
       return formatDate(date)
   } else {
       const date = new Date()
@@ -62,7 +48,7 @@ newDateDiv.innerHTML = `<div class="new-date__text">
                           <span class="new-date__span">Today is </span>
                         </div> ${changeDate(0)}`
 
-// function to add button-section to page including number if days to add
+// function to add button-section to page including number of days to add
 function buttonSectionToHtml(obj, index) {
   return `
     <div class="button-section">
