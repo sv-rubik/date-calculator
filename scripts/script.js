@@ -21,25 +21,35 @@ function formatDate(inputDate) {
   }
   return String(`${day} ${month} ${year}`)
 }
+// Below can be used instead of formatDate(), however above format is preferred by the App users
+// const options = { year: 'numeric', month: 'long', day: 'numeric' };
+// console.log(inputDate.toLocaleDateString(undefined, options))
 
 // function to get date = inputDate + days
 function changeDate (numberOfDays){
   if (inputDate) {
     const date = new Date(inputDate)
-      date.setDate(inputDate.getDate() + numberOfDays)
-      return formatDate(date)
+    date.setDate(inputDate.getDate() + numberOfDays)
+    return formatDate(date)
   } else {
-      const date = new Date()
-      date.setDate(date.getDate() + numberOfDays)
-      return formatDate(date)
+    const date = new Date()
+    date.setDate(date.getDate() + numberOfDays)
+    return formatDate(date)
   }
 }
 
 // function to check if expired and create notification
 function expiryTextCreator(date, placeholder) {
   if (new Date(date) < new Date()) {
-    placeholder.insertAdjacentHTML("beforeend", `<span class="expired"> *repacking expired!</span>`)
+    placeholder.insertAdjacentHTML("beforeend", `<span class="expired"> *repacking has expired!</span>`)
   }
+}
+
+// function to create error notification
+function providedValidNumber(inputValue) {
+  if(!Number.isInteger(inputValue) || inputValue > 10000 || inputValue <= 0) {
+    return alert('Please enter a number of days in range from 1 to 10.000')
+  } else {return true}
 }
 
 // reflect current date on the page
@@ -77,20 +87,19 @@ for(let i = 0; i < Object.keys(days).length; i++) {
   clickListener(days, i, newDateDiv)
 }
 
-// input numbers handling
+// number input handling
 document.querySelector(`[data-type="form-text"]`).addEventListener('submit', (e) => {
   e.preventDefault()
   let inputValue = +document.querySelector(`[data-type="form-input"]`).value
-  inputValue > 10000 || inputValue <= 0 ? alert('Please enter a number of days in range from 1 to 10.000') : true
-  Number.isInteger(inputValue)
-    ? newDateDiv.innerHTML = `<div class="new-date__text">
+  if (providedValidNumber(inputValue)) {
+    newDateDiv.innerHTML = `<div class="new-date__text">
                                 <span class="new-date__span">${inputValue} days added </span>
-                              </div>${changeDate(inputValue)}`
-    : alert('Please enter a number of days')
+                            </div>${changeDate(inputValue)}`
+  }
   expiryTextCreator(changeDate(inputValue), newDateDiv)
 })
 
-// input date handling
+// date input handling
 document.querySelector(`[data-type="form-date"]`).addEventListener('change', () => {
   inputDate = new Date(document.querySelector(`[data-type="form-date-input"]`).value)
   newDateDiv.innerHTML = `<div class="new-date__text">
