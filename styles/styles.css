@@ -70,6 +70,7 @@ html, body  {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
 
 .wrapper {
@@ -280,7 +281,7 @@ html, body  {
     background-image: linear-gradient(0deg, rgb(49, 52, 58) 0%, rgb(33, 35, 40) 100%);
     color: #e8e9ee;
     max-width: 5rem;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0 20px;
     padding: 0 10px;
 }
@@ -289,6 +290,8 @@ html, body  {
     text-decoration: none;
     text-transform: uppercase;
     color: #858b96;
+    -webkit-transition: color ease-in-out .3s;
+    -o-transition: color ease-in-out .3s;
     transition: color ease-in-out .3s;
 }
 
@@ -319,4 +322,11 @@ html, body  {
     width: 30px;
     height: 30px;
     opacity: 0.5;
+    -webkit-transition: opacity ease-in-out .3s;
+    -o-transition: opacity ease-in-out .3s;
+    transition: opacity ease-in-out .3s;
+}
+
+.footer__git:hover{
+    opacity: 0.8;
 }
