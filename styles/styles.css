@@ -81,6 +81,7 @@ html, body  {
     font-weight: 400;
     font-size: 1.5em;
     text-align: center;
+    padding: 0 10px;
 }
 
 .subtitle {
@@ -284,6 +285,32 @@ html, body  {
     line-height: 30px;
     margin: 0 20px;
     padding: 0 10px;
+}
+
+.form__fieldset {
+    width: 100%;
+    margin: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+    padding-block: 0;
+    padding: 0;
+    border: none;
+    line-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+#validity-legend {
+    display: none;
 }
 
 .reset {
