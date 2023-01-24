@@ -52,11 +52,12 @@ function providedValidNumber(inputValue) {
 // function to add button-section to page including number of days to add
 function buttonSectionToHtml(key, value) {
   return `
-    <div class="button-section">
+    <div class="button-section" aria-live="polite">
       <p class="button-section__text">
         Add <span class="span">${value} days</span> to selected date
       </p>
-      <button class="button-section__button" data-days="${key}">Calculate</button>
+      <button class="button-section__button" 
+        type="submit" data-days="${key}" aria-label="Add ${value} days to selected date">Calculate</button>
     </div>
   `
 }
